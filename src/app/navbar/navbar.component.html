@@ -1,56 +1,79 @@
-<nav class="bg-white text-blue-800 px-8 py-6">
-    <div class="container mx-auto flex justify-between items-center">
-      <!-- Company Logo and Name -->
-      <div class="flex items-center space-x-6">
+<nav class="bg-white text-blue-800 px-8 py-3 shadow-md sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Company Logo and Name -->
+    <div class="flex items-center space-x-6">
+      <a href="index.html">
         <img
           src="assets/Netroot-logo.jpeg"
           alt="Netroot Logo"
-          class="h-20 w-30" 
+          class="h-20 w-30"
         />
-        <div class="text-2xl font-bold text-blue-800"></div>
-      </div>
-  
-      <!-- Hamburger Menu Button -->
-      <button
-        class="md:hidden block text-blue-800 focus:outline-none"
-        (click)="toggleMenu()"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          />
-        </svg>
-      </button>
-  
-      <!-- Navigation Links -->
-      <ul
-        [class.hidden]="!menuOpen"
-        class="md:flex md:space-x-4 md:static absolute top-12 left-0 w-full bg-white md:bg-transparent md:w-auto md:p-0 p-4"
-      >
-      <li class="py-2 md:py-0">
-        <a routerLink="/" class="hover:text-gray-800 block text-red-800 font-bold">Home</a>
-      </li>
-      <li class="py-2 md:py-0">
-        <a routerLink="/aboutus" class="hover:text-gray-800 block text-red-800 font-bold">About Us</a>
-      </li>
-      <li class="py-2 md:py-0">
-        <a routerLink="/services" class="hover:text-gray-800 block text-red-800 font-bold">Services</a>
-      </li>
-      <li class="py-2 md:py-0">
-        <a routerLink="/contact" class="hover:text-gray-800 block text-red-800 font-bold">Contact</a>
-      </li>
-      
-      
-      </ul>
+      </a>
+      <div class="text-2xl font-bold text-blue-800"></div>
     </div>
-  </nav>
-  
+
+    <!-- Hamburger Menu Button -->
+    <button
+      class="md:hidden block text-blue-800 focus:outline-none"
+      (click)="toggleMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul
+      [class.hidden]="!menuOpen"
+      class="md:flex md:space-x-4 md:static absolute top-20 left-0 w-full bg-white md:bg-transparent md:w-auto md:p-0 p-4"
+    >
+      <li class="py-2 md:py-0">
+        <a
+          routerLink="/"
+          (click)="toggleMenu()"
+          class="hover:text-gray-800 block text-red-800 font-bold"
+        >
+          Home
+        </a>
+      </li>
+      <li class="py-2 md:py-0">
+        <a
+          routerLink="/aboutus"
+          (click)="toggleMenu()"
+          class="hover:text-gray-800 block text-red-800 font-bold"
+        >
+          About Us
+        </a>
+      </li>
+      <li class="py-2 md:py-0">
+        <a
+          routerLink="/services"
+          (click)="toggleMenu()"
+          class="hover:text-gray-800 block text-red-800 font-bold"
+        >
+          Services
+        </a>
+      </li>
+      <li class="py-2 md:py-0">
+        <a
+          routerLink="/contact"
+          (click)="toggleMenu()"
+          class="hover:text-gray-800 block text-red-800 font-bold"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
